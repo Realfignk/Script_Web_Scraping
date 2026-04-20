@@ -3,8 +3,13 @@ from bs4 import BeautifulSoup, Comment
 import re
 
 def extraer_datos_web(url, archivo_salida):
-    print(f"Conectando a {url}...")
+    print(f"Estableciendo conexion hacia: {url}...")
     try:
+        print("""
+-------------------------------------------------------------
+Proceso de extracción de comentarios y emails iniciado...
+-------------------------------------------------------------
+    """)
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         respuesta = requests.get(url, headers=headers)
         respuesta.raise_for_status() 
@@ -36,8 +41,11 @@ def extraer_datos_web(url, archivo_salida):
                     archivo.write(f"\n")
         else:
             archivo.write("No se encontraron comentarios HTML.\n")
-    print("¡Extracción completada con éxito!")
-
+    print("""
+--------------------------------------------------------------
+Proceso de extracción completado.
+--------------------------------------------------------------
+    """)
     
 url_objetivo = input("Ingresa una url válida (con puerto si no es el default [80] [8080]):")
 nombre_del_archivo = "resultados_scrapping.txt"
