@@ -20,6 +20,14 @@ Es necesario tener instalado o contar con:
 
 
 ## Ejemplo de SalidaPlaintext
-[INFO] Iniciando proceso de red...
-[SUCCESS] Conexión establecida en wlan0.
-[DONE] Proceso finalizado correctamente.
+
+Estableciendo Conexion con https://google.com...
+
+-------------------------------------------------------------
+Proceso de extracción de comentarios y emails iniciado...
+-------------------------------------------------------------
+-------------------------------------------------------
+Proceso de extracción finalizado.
+-------------------------------------------------------
+
+Archivo de resultados creado: resultados_scraping.txt.
